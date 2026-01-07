@@ -1,9 +1,12 @@
-name: Ci Pipeline
+# pipeline name
+name: Ci Pipeline  
 
+# tells that the pipeline jobs should run only on main branch which is prod. ready
 on:
   push:
     branches: [ main ]
 
+# jobs: steps which need to be performed after push event(trigger)
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,3 +26,6 @@ jobs:
 
       - name: Run tests
         run: npm test  
+
+
+# indentation is very important in yaml files, double space after every param
