@@ -9,17 +9,17 @@ jobs:
     runs-on: ubuntu-latest
 
 
-steps:
-  - name: Checkout code
-    uses: actions/checkout@y5
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@y5
 
-  - name: Setup Node
-    uses: actions/setup-node@y3
-    with:
-      node-version: 16
+      - name: Setup Node
+        uses: actions/setup-node@y3
+        with:
+          node-version: 16
 
-  - name: Install dependencies
-    run: npm install
+      - name: Install dependencies
+        run: npm install
 
-  - name: Run tests
-    run: npm test  
+      - name: Run tests
+        run: npm test  
